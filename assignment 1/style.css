@@ -1,0 +1,187 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+}
+
+body{
+  background:linear-gradient(to bottom right,#f3f4ff,#ececff);
+  min-height:100vh;
+  padding:40px;
+}
+
+.container{
+  background:rgba(255,255,255,0.4);
+  border-radius:30px;
+  padding:50px;
+  backdrop-filter:blur(10px);
+}
+
+/* HEADER */
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  width:180px;
+}
+
+.icon-btn{
+  width:50px;
+  height:50px;
+  border:none;
+  border-radius:15px;
+  background:white;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  cursor:pointer;
+  font-size:20px;
+}
+
+/* SEARCH */
+
+.search-section{
+  margin-top:40px;
+
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.search-section input,
+.search-section select{
+  border:none;
+  padding:18px 24px;
+  border-radius:50px;
+  background:white;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+  outline:none;
+}
+
+.search-section input{
+  width:60%;
+}
+
+.search-section select{
+  width:220px;
+}
+
+/* GRID */
+
+.card-grid{
+  
+
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+  margin-top:50px;
+}
+
+
+/* CARD */
+
+.card{
+    background:white;
+
+    border-radius:30px;
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+
+    transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.card img{
+  width:180px;
+  height:180px;
+  object-fit:contain;
+}
+
+.card h2{
+  margin-top:20px;
+  font-size:28px;
+  color:#1e293b;
+}
+
+/* TYPES */
+
+.type{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 20px;
+  border-radius:30px;
+  color:white;
+  font-weight:bold;
+}
+
+.grass{
+  background:#43c463;
+}
+
+.fire{
+  background:#ff6b4a;
+}
+
+.water{
+  background:#5b8cff;
+}
+
+.dark{
+  background:#555;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+  .card-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+@media(max-width:700px){
+
+  .search-section{
+    flex-direction:column;
+  }
+
+  .search-section input{
+    width:100%;
+  }
+
+  .search-section select{
+    width:100%;
+  }
+
+  .card-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:1000px){
+
+    .cards_grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:700px){
+
+    .cards_grid{
+        grid-template-columns:1fr;
+    }
+
+}
